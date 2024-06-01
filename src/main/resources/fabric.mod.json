@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "infernovastructures",
+	"version": "${version}",
+	"name": "Infernova Structures",
+	"description": "Hey check my first mod !",
+	"authors": [
+		"Vairosh"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/infernovastructures/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.leo.infernovastructures.InfernovaStructures"
+		],
+		"client": [
+			"net.leo.infernovastructures.InfernovaStructuresClient"
+		],
+		"fabric-datagen": [
+			"net.leo.infernovastructures.InfernovaStructuresDataGenerator"
+		]
+	},
+	"mixins": [
+		"infernovastructures.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
