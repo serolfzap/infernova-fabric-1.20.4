@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "infernovastructures:block/reed_bottom"
+    },
+    "half=upper": {
+      "model": "infernovastructures:block/reed_top"
+    }
+  }
+}

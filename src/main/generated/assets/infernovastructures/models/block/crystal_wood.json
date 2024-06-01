@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "infernovastructures:block/crystal_log",
+    "side": "infernovastructures:block/crystal_log"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "infernovastructures:block/wicker_bottom"
+  }
+}

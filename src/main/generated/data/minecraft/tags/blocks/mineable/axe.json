@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "infernovastructures:crystal_planks",
+    "infernovastructures:crystal_log",
+    "infernovastructures:crystal_wood",
+    "infernovastructures:stripped_crystal_log",
+    "infernovastructures:stripped_crystal_wood",
+    "infernovastructures:crystal_stairs",
+    "infernovastructures:crystal_button",
+    "infernovastructures:crystal_slab",
+    "infernovastructures:crystal_pressure_plate",
+    "infernovastructures:crystal_fence",
+    "infernovastructures:crystal_fence_gate",
+    "infernovastructures:crystal_door",
+    "infernovastructures:crystal_trapdoor"
+  ]
+}

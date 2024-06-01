@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "infernovastructures:sugilite_ore",
+    "infernovastructures:deepslate_sugilite_ore",
+    "infernovastructures:sandstone_pillar",
+    "infernovastructures:sandstone_spiral",
+    "infernovastructures:cracked_smooth_sandstone"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "infernovastructures:block/crystal_slab"
+    },
+    "type=double": {
+      "model": "infernovastructures:block/crystal_planks"
+    },
+    "type=top": {
+      "model": "infernovastructures:block/crystal_slab_top"
+    }
+  }
+}

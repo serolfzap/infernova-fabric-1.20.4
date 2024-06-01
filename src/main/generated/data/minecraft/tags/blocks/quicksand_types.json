@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "infernovastructures:quicksand",
+    "infernovastructures:quickredsand",
+    "infernovastructures:silty_clay",
+    "infernovastructures:flowing_mud"
+  ]
+}

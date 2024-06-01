@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "infernovastructures:crystal_log",
+    "infernovastructures:crystal_wood",
+    "infernovastructures:stripped_crystal_log",
+    "infernovastructures:stripped_crystal_wood"
+  ]
+}

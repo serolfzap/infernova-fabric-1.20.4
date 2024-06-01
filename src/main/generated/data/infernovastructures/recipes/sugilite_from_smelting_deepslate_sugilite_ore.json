@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "sugilite",
+  "ingredient": {
+    "item": "infernovastructures:deepslate_sugilite_ore"
+  },
+  "result": "infernovastructures:sugilite"
+}

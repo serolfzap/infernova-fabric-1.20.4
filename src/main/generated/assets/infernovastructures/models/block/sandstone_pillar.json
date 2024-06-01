@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "infernovastructures:block/sandstone_pillar_top",
+    "side": "infernovastructures:block/sandstone_pillar"
+  }
+}

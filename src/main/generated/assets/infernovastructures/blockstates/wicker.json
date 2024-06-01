@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "infernovastructures:block/wicker_bottom"
+    },
+    "half=upper": {
+      "model": "infernovastructures:block/wicker_top"
+    }
+  }
+}
