@@ -1,4 +1,4 @@
-package net.leo.infernovastructures.entity.custom;
+package net.leo.infernovastructures.entity.item;
 
 import net.leo.infernovastructures.block.InfernovaStructuresBlocks;
 import net.leo.infernovastructures.block.custom.CoconutBlock;

@@ -1,34 +1,47 @@
 package net.leo.infernovastructures.block.custom;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
+
+import net.minecraft.block.*;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.vehicle.BoatEntity;
+import net.minecraft.server.world.ServerWorld;
+
+
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-
-
-public class LeavesBlock extends Block  {
-
-
-    private static final VoxelShape SHAPE = Block.createCuboidShape(4, 0, 4, 12, 8, 12);
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 
 
 
-    public LeavesBlock(Settings settings) {
+public class LeavesBlockSimple extends FlowerbedBlock {
+
+
+
+
+
+    public LeavesBlockSimple(Settings settings) {
         super(settings);
     }
 
-    @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
-    }
 
-    @Override
-    public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

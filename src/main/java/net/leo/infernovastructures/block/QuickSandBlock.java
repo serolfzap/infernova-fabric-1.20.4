@@ -1,6 +1,7 @@
 package net.leo.infernovastructures.block;
 
 import com.mojang.serialization.MapCodec;
+import net.leo.infernovastructures.datagen.INBlockTagProvider;
 import net.leo.infernovastructures.item.InfernovaStructuresItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
@@ -27,15 +28,14 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class QuickSand extends Block implements FluidDrainable {
-    public static final MapCodec<QuickSand> CODEC = QuickSand.createCodec(QuickSand::new);
+public class QuickSandBlock extends Block implements FluidDrainable {
+    public static final MapCodec<QuickSandBlock> CODEC = QuickSandBlock.createCodec(QuickSandBlock::new);
     private static final VoxelShape FALLING_SHAPE = VoxelShapes.cuboid(0.0, 0.0, 0.0, 1.0, 0.9f, 1.0);
 
-
-    public MapCodec<QuickSand> getCodec() {
+    public MapCodec<QuickSandBlock> getCodec() {
         return CODEC;
     }
-    public QuickSand(Settings settings) {
+    public QuickSandBlock(Settings settings) {
         super(settings);
     }
 
@@ -57,7 +57,7 @@ public class QuickSand extends Block implements FluidDrainable {
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (!(entity instanceof LivingEntity) || entity.getBlockStateAtPos().isOf(this)) {
-            entity.slowMovement(state, new Vec3d(0.9f, 1.5, 0.9f));
+            entity.slowMovement(state, new Vec3d(0.75f, 1.3, 0.75f));
             if (world.isClient) {
                 boolean bl;
                 Random random = world.getRandom();
@@ -65,6 +65,10 @@ public class QuickSand extends Block implements FluidDrainable {
                 if (bl && random.nextBoolean()) {
                     world.addParticle(ParticleTypes.AMBIENT_ENTITY_EFFECT, entity.getX(), pos.getY() + 1, entity.getZ(), MathHelper.nextBetween(random, -1.0f, 1.0f) * 0.083333336f, 0.05f, MathHelper.nextBetween(random, -1.0f, 1.0f) * 0.083333336f);
                 }
+            }
+            if (world.getBlockState(new BlockPos(entity.getBlockX(), (int) (entity.getEyeY() - 0.1111111119389534), entity.getBlockZ())).isIn(INBlockTagProvider.QUICKSAND_TYPES)) {
+                    entity.damage(world.getDamageSources().inWall(), 1.0f);
+
             }
         }
         if (!world.isClient) {
@@ -95,7 +99,7 @@ public class QuickSand extends Block implements FluidDrainable {
                 return FALLING_SHAPE;
             }
             boolean bl = entity instanceof FallingBlockEntity;
-                    if (bl || QuickSand.canWalkOnQuicksand(entity) && context.isAbove(VoxelShapes.fullCube(), pos, false) && !context.isDescending()) {
+                    if (bl || QuickSandBlock.canWalkOnQuicksand(entity) && context.isAbove(VoxelShapes.fullCube(), pos, false) && !context.isDescending()) {
                 return super.getCollisionShape(state, world, pos, context);
             }
         }

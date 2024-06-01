@@ -1,4 +1,4 @@
-package net.leo.infernovastructures.world.gen;
+package net.leo.infernovastructures.world;
 
 import net.leo.infernovastructures.InfernovaStructures;
 import net.minecraft.registry.Registerable;
@@ -22,8 +22,8 @@ public class INPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, SUGILITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(INConfiguredFeatures.SUGILITE_ORE_KEY),
-                INOrePlacement.modifiersWithCount(7, // Veins per Chunk
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(60))));
+                INOrePlacement.modifiersWithCount(3, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-50), YOffset.fixed(30))));
 
     }
 

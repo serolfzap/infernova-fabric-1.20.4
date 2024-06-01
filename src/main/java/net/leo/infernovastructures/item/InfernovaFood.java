@@ -1,2 +1,6 @@
-package net.leo.infernovastructures.item;public class InfernovaFood {
+package net.leo.infernovastructures.item;
+
+import net.minecraft.item.FoodComponent;
+
+public class InfernovaFood {
 }

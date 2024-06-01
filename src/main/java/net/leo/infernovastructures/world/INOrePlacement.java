@@ -1,4 +1,4 @@
-package net.leo.infernovastructures.world.gen;
+package net.leo.infernovastructures.world;
 
 import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;

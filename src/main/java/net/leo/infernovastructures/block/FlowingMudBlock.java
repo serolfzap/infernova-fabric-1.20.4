@@ -1,6 +1,7 @@
 package net.leo.infernovastructures.block;
 
 import com.mojang.serialization.MapCodec;
+import net.leo.infernovastructures.datagen.INBlockTagProvider;
 import net.leo.infernovastructures.item.InfernovaStructuresItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
@@ -27,15 +28,17 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class PowderMudBlock extends Block implements FluidDrainable {
-    public static final MapCodec<PowderMudBlock> CODEC = PowderMudBlock.createCodec(PowderMudBlock::new);
+public class FlowingMudBlock extends Block implements FluidDrainable {
+    public static final MapCodec<FlowingMudBlock> CODEC = FlowingMudBlock.createCodec(FlowingMudBlock::new);
     private static final VoxelShape FALLING_SHAPE = VoxelShapes.cuboid(0.0, 0.0, 0.0, 1.0, 0.9f, 1.0);
 
 
-    public MapCodec<PowderMudBlock> getCodec() {
+
+
+    public MapCodec<FlowingMudBlock> getCodec() {
         return CODEC;
     }
-    public PowderMudBlock(Settings settings) {
+    public FlowingMudBlock(Settings settings) {
         super(settings);
     }
 
@@ -66,7 +69,8 @@ public class PowderMudBlock extends Block implements FluidDrainable {
                     world.addParticle(ParticleTypes.AMBIENT_ENTITY_EFFECT, entity.getX(), pos.getY() + 1, entity.getZ(), MathHelper.nextBetween(random, -1.0f, 1.0f) * 0.083333336f, 0.05f, MathHelper.nextBetween(random, -1.0f, 1.0f) * 0.083333336f);
                 }
             }
-            if (world.getBlockState(new BlockPos(entity.getBlockX(), (int) (entity.getEyeY() - 0.1111111119389534), entity.getBlockZ())).isOf(InfernovaStructuresBlocks.POWDER_MUD)) {                entity.damage(world.getDamageSources().inWall(), 1.0f);
+            if (world.getBlockState(new BlockPos(entity.getBlockX(), (int) (entity.getEyeY() - 0.1111111119389534), entity.getBlockZ())).isIn(INBlockTagProvider.QUICKSAND_TYPES)) {
+                    entity.damage(world.getDamageSources().inWall(), 1.0f);
             }
         }
         if (!world.isClient) {
@@ -97,7 +101,7 @@ public class PowderMudBlock extends Block implements FluidDrainable {
                 return FALLING_SHAPE;
             }
             boolean bl = entity instanceof FallingBlockEntity;
-                    if (bl || PowderMudBlock.canWalkOnPowderMud(entity) && context.isAbove(VoxelShapes.fullCube(), pos, false) && !context.isDescending()) {
+                    if (bl || FlowingMudBlock.canWalkOnPowderMud(entity) && context.isAbove(VoxelShapes.fullCube(), pos, false) && !context.isDescending()) {
                 return super.getCollisionShape(state, world, pos, context);
             }
         }
@@ -128,7 +132,7 @@ public class PowderMudBlock extends Block implements FluidDrainable {
         if (!world.isClient()) {
             world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, pos, Block.getRawIdFromState(state));
         }
-        return new ItemStack(InfernovaStructuresItems.POWDER_MUD_BUCKET);
+        return new ItemStack(InfernovaStructuresItems.FLOWING_MUD_BUCKET);
     }
 
     @Override

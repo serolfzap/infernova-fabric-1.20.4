@@ -1,4 +1,4 @@
-package net.leo.infernovastructures.villager;
+package net.leo.infernovastructures.entity.villager;
 
 import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;

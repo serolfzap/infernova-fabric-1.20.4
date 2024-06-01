@@ -1,0 +1,76 @@
+{
+  "block.infernovastructures.coconut_block":"Coconut",
+  "item.infernovastructures.sugilite":"Sugilite",
+  "item.infernovastructures.quicksand_bucket":"Quicksand Bucket",
+  "item.infernovastructures.quickredsand_bucket":"Quickredsand Bucket",
+  "item.infernovastructures.flowing_mud_bucket": "Flowing Mud Bucket",
+  "item.infernovastructures.silty_clay_bucket": "Silty Clay Bucket",
+  "item.infernovastructures.explosive_glove": "Explosive Glove",
+  "block.infernovastructures.leaves_block": "Leaves",
+
+
+
+  "block.infernovastructures.sandstone_pillar": "Sandstone Pillar",
+  "block.infernovastructures.sandstone_spiral": "Sandstone Spiral",
+  "block.infernovastructures.cracked_smooth_sandstone": "Cracked Smooth Sandstone",
+
+
+
+  "block.infernovastructures.crystal_leaves": "Crystal Leaves",
+  "block.infernovastructures.crystal_log": "Crystal Log",
+  "block.infernovastructures.crystal_wood": "Crystal Wood",
+  "block.infernovastructures.crystal_planks": "Crystal Planks",
+  "block.infernovastructures.stripped_crystal_log": "Stripped Crystal Log",
+  "block.infernovastructures.stripped_crystal_wood": "Stripped Crystal Wood",
+  "block.infernovastructures.crystal_stairs": "Crystal Stairs",
+  "block.infernovastructures.crystal_slab": "Crystal Slab",
+  "block.infernovastructures.crystal_trapdoor": "Crystal Trapdoor",
+  "block.infernovastructures.crystal_door": "Crystal Door",
+  "block.infernovastructures.crystal_fence_gate": "Crystal Fence Gate",
+  "block.infernovastructures.crystal_fence": "Crystal Fence",
+  "block.infernovastructures.crystal_pressure_plate": "Crystal Pressure Plate",
+  "block.infernovastructures.crystal_button": "Crystal Button",
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "block.infernovastructures.reed": "Reed",
+  "block.infernovastructures.wicker": "Wicker",
+  "block.infernovastructures.crystal_flower": "Crystal Flower",
+  "block.infernovastructures.tamarisk": "Tamarisk ",
+  "block.infernovastructures.crystal_sapling": "Crystal Sapling ",
+  "block.infernovastructures.begonia": "Begonia  ",
+  "block.infernovastructures.sparkleflora": "Sparklefora  ",
+
+
+
+
+
+
+
+
+
+
+  "block.infernovastructures.quicksand": "Quicksand",
+  "block.infernovastrcutures.quickredsand": "Quickredsand",
+  "block.infernovastrcutures.powder_mud": "Powder Mud",
+  "block.infernovastrcutures.powder_clay": "Powder Clay",
+
+
+
+
+
+  "block.infernovastructures.sugilite_ore": "Sugilite Ore",
+  "block.infernovastructures.deepslate_sugilite_ore": "Deepslate Sugilite Ore",
+
+  "itemgroup.coconut": "Infernova Strucutures"
+}

@@ -3,7 +3,7 @@
 	"id": "infernovastructures",
 	"version": "${version}",
 	"name": "Infernova Structures",
-	"description": "Hey check my first mod !",
+	"description": "Hey check my first mod!",
 	"authors": [
 		"Vairosh"
 	],
@@ -32,6 +32,7 @@
 		"fabricloader": ">=0.15.9",
 		"minecraft": "~1.20.4",
 		"java": ">=17",
+		"geckolib": ">=4.4.2",
 		"fabric-api": "*"
 	},
 	"suggests": {

@@ -11,6 +11,15 @@ base {
 }
 
 repositories {
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+		content {
+			includeGroupByRegex("software\\.bernie.*")
+			includeGroup("com.eliotlash.mclib")
+		}
+	}
+
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -18,9 +27,12 @@ repositories {
 	// for more information about repositories.
 }
 
+
+
 fabricApi {
 	configureDataGeneration()
 }
+
 
 dependencies {
 	// To change the versions see the gradle.properties file
@@ -30,6 +42,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.4:4.4.2'
 	
 }
 
@@ -77,3 +91,4 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
