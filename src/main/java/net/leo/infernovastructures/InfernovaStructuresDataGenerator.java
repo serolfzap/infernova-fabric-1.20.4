@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.leo.infernovastructures.datagen.*;
 import net.leo.infernovastructures.world.INConfiguredFeatures;
 import net.leo.infernovastructures.world.INPlacedFeatures;
+import net.leo.infernovastructures.world.biome.INBiomes;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
@@ -29,6 +30,9 @@ public class InfernovaStructuresDataGenerator implements DataGeneratorEntrypoint
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, INConfiguredFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, INPlacedFeatures::boostrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, INBiomes::boostrap);
+
+
 
 	}
 }
