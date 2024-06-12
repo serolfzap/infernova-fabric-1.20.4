@@ -7,7 +7,7 @@
 		"TrunkPlacerTypeInvoker"
 	],
 	"client": [
-		"VillagerResemblingModelMixin"
+		"VillagerEntityRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

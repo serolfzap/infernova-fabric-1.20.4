@@ -19,6 +19,9 @@ repositories {
 			includeGroup("com.eliotlash.mclib")
 		}
 	}
+	maven {
+		url = 'https://maven.minecraftforge.net/' }
+
 
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
@@ -44,6 +47,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.4:4.4.2'
+
+	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.20.4-3.3.0.12'
 	
 }
 

@@ -3,6 +3,7 @@ package net.leo.infernovastructures.entity.render;
 import com.google.common.collect.Sets;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.leo.infernovastructures.InfernovaStructures;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
@@ -13,12 +14,15 @@ import java.util.stream.Stream;
 @Environment(EnvType.CLIENT)
 public class INEntityLayers {
 
+
+    public static final EntityModelLayer MODIFIED_VILLAGER = new EntityModelLayer(new Identifier(InfernovaStructures.MOD_ID, "infernova"), "main");
+
     private static final String MAIN = "main";
 
     private static final Set<EntityModelLayer> LAYERS = Sets.newHashSet();
 
 
-    public static final EntityModelLayer MODIFIED_VILLAGER = registerMain("villager");
+
 
     public INEntityLayers() {
     }

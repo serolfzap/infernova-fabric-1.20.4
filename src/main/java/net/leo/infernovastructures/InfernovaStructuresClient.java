@@ -3,9 +3,12 @@ package net.leo.infernovastructures;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.leo.infernovastructures.block.InfernovaStructuresBlocks;
 import net.leo.infernovastructures.entity.INEntities;
+import net.leo.infernovastructures.entity.render.INEntityLayers;
+import net.leo.infernovastructures.entity.render.INVillagerResemblingModel;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
@@ -36,6 +39,9 @@ public class InfernovaStructuresClient implements ClientModInitializer {
             }
             return BiomeColors.getFoliageColor(world, pos);
         }, InfernovaStructuresBlocks.LEAVES_BLOCK);
+
+        EntityModelLayerRegistry.registerModelLayer(INEntityLayers.MODIFIED_VILLAGER, INVillagerResemblingModel::getModelData);
+
 
 
     }

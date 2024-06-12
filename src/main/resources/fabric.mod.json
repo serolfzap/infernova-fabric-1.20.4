@@ -23,6 +23,9 @@
 		],
 		"fabric-datagen": [
 			"net.leo.infernovastructures.InfernovaStructuresDataGenerator"
+		],
+		"terrablender": [
+			"net.leo.infernovastructures.world.biome.INTerrablender"
 		]
 	},
 	"mixins": [

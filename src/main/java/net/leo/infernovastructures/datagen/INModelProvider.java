@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leo.infernovastructures.block.InfernovaStructuresBlocks;
 import net.leo.infernovastructures.item.InfernovaStructuresItems;
 import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
 
 public class INModelProvider extends FabricModelProvider {
@@ -18,9 +19,12 @@ public class INModelProvider extends FabricModelProvider {
 
 
 
-
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+
+        Identifier modelId = TexturedModel.CUBE_BOTTOM_TOP.get(InfernovaStructuresBlocks.MINING_WORKBENCH).upload(InfernovaStructuresBlocks.MINING_WORKBENCH, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(InfernovaStructuresBlocks.MINING_WORKBENCH, modelId));
+
 
         BlockStateModelGenerator.BlockTexturePool crystalPool = blockStateModelGenerator.registerCubeAllModelTexturePool(InfernovaStructuresBlocks.CRYSTAL_PLANKS);
 
@@ -30,6 +34,7 @@ public class INModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(InfernovaStructuresBlocks.CRACKED_SMOOTH_SANDSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(InfernovaStructuresBlocks.P_SANDSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(InfernovaStructuresBlocks.S_SANDSTONE);
+
 
 
 
@@ -78,6 +83,7 @@ public class INModelProvider extends FabricModelProvider {
 
 
 
+
         //Json custom blocks
         blockStateModelGenerator.registerSimpleState(InfernovaStructuresBlocks.COCONUT_BLOCK);
         blockStateModelGenerator.registerSimpleState(InfernovaStructuresBlocks.LUMINOUS_MUSHROOM);
@@ -93,6 +99,8 @@ public class INModelProvider extends FabricModelProvider {
 
 
     }
+
+
 
 
 

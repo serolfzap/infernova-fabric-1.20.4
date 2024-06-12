@@ -162,7 +162,8 @@ public class InfernovaStructuresBlocks {
             new LuminousMushroom(FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM).sounds(BlockSoundGroup.GRASS).noCollision()));
 
 
-
+    public  static final Block MINING_WORKBENCH = registerBlock("mining_workbench",
+            new Block(FabricBlockSettings.copyOf(Blocks.SMITHING_TABLE)));
 
 
 

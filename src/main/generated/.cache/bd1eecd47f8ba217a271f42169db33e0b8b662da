@@ -1,4 +1,6 @@
-// 1.20.4	2024-05-28T14:47:52.4493475	Infernova Structures/World gen
+// 1.20.4	2024-06-12T17:59:29.658531	Infernova Structures/World gen
 6607052246d49102df96692c5fa837c15939a179 data\infernovastructures\worldgen\configured_feature\sugilite_ore.json
-de4ede71f830398bd79f3d58de37307ae47a5cb8 data\infernovastructures\worldgen\configured_feature\crystal.json
-c363acabcaf7de43244ef760505834cacf20398c data\infernovastructures\worldgen\placed_feature\ruby_ore_placed.json
+6dd0702217a26347d428dd913aa6df55d22920d1 data\infernovastructures\worldgen\configured_feature\crystal.json
+c363acabcaf7de43244ef760505834cacf20398c data\infernovastructures\worldgen\placed_feature\sugilite_ore_placed.json
+36540d64a170d5c9b8f1baca30e8c0c9f93c108c data\infernovastructures\worldgen\placed_feature\inflowers_placed.json
+2d1861df38a6b66212598c9d3865bc0b91a5c472 data\infernovastructures\worldgen\biome\crysal_biome.json

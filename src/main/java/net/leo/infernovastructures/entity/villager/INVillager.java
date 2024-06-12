@@ -19,7 +19,7 @@ public class INVillager {
 
     public static final RegistryKey<PointOfInterestType> MINER_POI_KEY = poiKey("minerpoi");
     public static  final PointOfInterestType MINER_POI = registerpoi("minerpoi",
-            InfernovaStructuresBlocks.SANDSTONE_PILLAR);
+            InfernovaStructuresBlocks.MINING_WORKBENCH);
 
     public static final VillagerProfession MINER = registerProfession("miner", MINER_POI_KEY);
 
