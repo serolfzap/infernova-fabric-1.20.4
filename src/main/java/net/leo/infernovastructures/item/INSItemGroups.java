@@ -26,6 +26,11 @@ public class INSItemGroups {
                         entries.add(InfernovaStructuresItems.EXPLOSIVE_GLOVE);
                         entries.add(InfernovaStructuresItems.LUMINOUS_MUSHROOM);
 
+                        entries.add(InfernovaStructuresItems.SUGILSHARD_IRON_PICKAXE);
+                        entries.add(InfernovaStructuresItems.SUGILSHARD_IRON_SHOVEL);
+
+
+
 
 
 

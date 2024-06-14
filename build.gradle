@@ -23,6 +23,8 @@ repositories {
 		url = 'https://maven.minecraftforge.net/' }
 
 
+
+
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -49,7 +51,8 @@ dependencies {
 	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.4:4.4.2'
 
 	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.20.4-3.3.0.12'
-	
+
+
 }
 
 processResources {

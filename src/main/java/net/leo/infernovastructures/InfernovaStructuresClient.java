@@ -1,6 +1,8 @@
 package net.leo.infernovastructures;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
@@ -9,10 +11,13 @@ import net.leo.infernovastructures.block.InfernovaStructuresBlocks;
 import net.leo.infernovastructures.entity.INEntities;
 import net.leo.infernovastructures.entity.render.INEntityLayers;
 import net.leo.infernovastructures.entity.render.INVillagerResemblingModel;
+import net.leo.infernovastructures.world.INPlacedFeatures;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
+import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.gen.GenerationStep;
 
 public class InfernovaStructuresClient implements ClientModInitializer {
     @Override
@@ -42,9 +47,10 @@ public class InfernovaStructuresClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(INEntityLayers.MODIFIED_VILLAGER, INVillagerResemblingModel::getModelData);
 
+    }
 
 
     }
-}
+
 
 

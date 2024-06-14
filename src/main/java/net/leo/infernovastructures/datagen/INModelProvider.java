@@ -124,6 +124,10 @@ public class INModelProvider extends FabricModelProvider {
         itemModelGenerator.register(InfernovaStructuresItems.FLOWING_MUD_BUCKET, Models.GENERATED);
         itemModelGenerator.register(InfernovaStructuresItems.SILTY_CLAY_BUCKET, Models.GENERATED);
         itemModelGenerator.register(InfernovaStructuresItems.LUMINOUS_MUSHROOM, Models.GENERATED);
+        itemModelGenerator.register(InfernovaStructuresItems.SUGILSHARD_IRON_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(InfernovaStructuresItems.SUGILSHARD_IRON_SHOVEL, Models.HANDHELD);
+
+
 
 
 

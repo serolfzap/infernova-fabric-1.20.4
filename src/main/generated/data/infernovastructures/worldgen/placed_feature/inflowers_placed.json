@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:inflowers",
+  "feature": "infernovastructures:inflowers",
   "placement": [
     {
       "type": "minecraft:noise_threshold_count",

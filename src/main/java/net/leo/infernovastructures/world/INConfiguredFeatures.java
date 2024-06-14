@@ -3,6 +3,8 @@ package net.leo.infernovastructures.world;
 
 import net.leo.infernovastructures.InfernovaStructures;
 import net.leo.infernovastructures.block.InfernovaStructuresBlocks;
+import net.leo.infernovastructures.world.tree.custom.CrystalTrunkPlacer;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 
 import net.minecraft.registry.RegistryKey;
@@ -19,6 +21,7 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.NoiseThresholdBlockStateProvider;
+import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
@@ -28,7 +31,12 @@ public class INConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRYSTAL_KEY = registerKey("crystal");
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> INFLOWERS_KEY = ConfiguredFeatures.of("inflowers");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> INFLOWERS_KEY = registerKey("inflowers");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> QUICKSAND_KEY = registerKey("quicksand");
+
+
+
 
 
 
@@ -47,7 +55,7 @@ public class INConfiguredFeatures {
 
         register(context, CRYSTAL_KEY, Feature.TREE,new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(InfernovaStructuresBlocks.CRYSTAL_LOG),
-                new StraightTrunkPlacer(6,5,4),
+                new CrystalTrunkPlacer(6,5,4),
 
                 BlockStateProvider.of(InfernovaStructuresBlocks.CRYSTAL_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2),
@@ -64,14 +72,27 @@ public class INConfiguredFeatures {
                                 (new NoiseThresholdBlockStateProvider(2345L, new DoublePerlinNoiseSampler
                                         .NoiseParameters(0, 1.0, new double[0]),
                                         0.005F, -0.8F, 0.33333334F,
-                                        InfernovaStructuresBlocks.BEGONIA.getDefaultState(),
+                                        Blocks.POPPY.getDefaultState(),
+                                        List.of(InfernovaStructuresBlocks.BEGONIA.getDefaultState()),
                                         List.of(InfernovaStructuresBlocks.SPARKLEFLORA
-                                        .getDefaultState(), InfernovaStructuresBlocks.REED.getDefaultState(),
-                                                InfernovaStructuresBlocks.CRYSTAL_FLOWER.
-                                        getDefaultState(), InfernovaStructuresBlocks.WICKER.getDefaultState()),
-                                        List.of(InfernovaStructuresBlocks.TAMARISK.getDefaultState()))))));
+                                                .getDefaultState(), InfernovaStructuresBlocks.CRYSTAL_FLOWER.
+                                                getDefaultState()))))));
+
+
+
+       ConfiguredFeatures.register(context, QUICKSAND_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(
+                40, 10, 20, PlacedFeatures.createEntry(
+                Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(
+                        BlockStateProvider.of(InfernovaStructuresBlocks.QUICKSAND.getDefaultState())
+                )
+        )
+        ));
+
+
+
 
     }
+
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(InfernovaStructures.MOD_ID, name));
@@ -81,5 +102,10 @@ public class INConfiguredFeatures {
             (Registerable<ConfiguredFeature<?, ?>> context, RegistryKey<ConfiguredFeature<?,
                     ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
+    }
+
+    public static void register(Registerable<ConfiguredFeature<?, ?>> registerable,
+                                RegistryKey<ConfiguredFeature<?, ?>> key, Feature<DefaultFeatureConfig> feature) {
+        register(registerable, key, feature, FeatureConfig.DEFAULT);
     }
 }

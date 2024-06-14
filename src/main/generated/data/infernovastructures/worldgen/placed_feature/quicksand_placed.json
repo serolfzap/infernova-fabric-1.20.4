@@ -1,0 +1,8 @@
+{
+  "feature": "infernovastructures:quicksand",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -40,10 +40,19 @@ public class InfernovaStructuresItems {
             new PowderSnowBucketItem(InfernovaStructuresBlocks.SILTY_CLAY,  SoundEvents.ITEM_BUCKET_EMPTY,
                     new FabricItemSettings().maxCount(1)));
 
-    public static final Item EXPLOSIVE_GLOVE = registerItem("explosive_glove",new ExplosiveGlove(new FabricItemSettings().maxCount(1)));
+    public static final Item EXPLOSIVE_GLOVE = registerItem("explosive_glove",new ExplosiveGlove(INToolMaterial.IRON_GLOVE, new FabricItemSettings()));
 
 
     public static final Item LUMINOUS_MUSHROOM = registerItem("luminous_mushroom",new LuminousMushroomItem(InfernovaStructuresBlocks.LUMINOUS_MUSHROOM, new FabricItemSettings()));
+
+    public static final Item SUGILSHARD_IRON_PICKAXE = registerItem("sugilshard_iron_pickaxe", new PickaxeItem(ToolMaterials.IRON, 2, -2.8F, new FabricItemSettings()));
+
+    public static final Item SUGILSHARD_IRON_SHOVEL = registerItem("sugilshard_iron_shovel", new ShovelItem(ToolMaterials.IRON, 2.5F, -2.9F, new FabricItemSettings()));
+
+
+
+
+
 
 
 

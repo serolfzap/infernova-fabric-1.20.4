@@ -45,6 +45,8 @@ public class InfernovaStructures implements ModInitializer {
 
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, INPlacedFeatures.SUGILITE_ORE_PLACED_KEY);
 
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT), GenerationStep.Feature.TOP_LAYER_MODIFICATION, INPlacedFeatures.QUICKSAND_PLACED_KEY);
+
 
 
 
